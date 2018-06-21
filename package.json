@@ -1,0 +1,16 @@
+{
+  "name": "arithmetica-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "compile-css": "sass scss/main.scss css/main.css",
+    "watch": "sass --watch scss/main.scss:css/main.css",
+    "start": "php -S localhost:8888"
+  },
+  "author": "Ryan Goree",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.9.0"
+  }
+}
