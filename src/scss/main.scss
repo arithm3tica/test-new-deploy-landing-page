@@ -225,7 +225,7 @@ input:not([type=submit]):not([type=file]) {
             }
 
             &[target=_blank]:after {
-                content: url(/images/new-tab-link.svg);
+                content: url(../images/new-tab-link.svg);
                 vertical-align: middle;
                 margin-left: 5px;
             }
