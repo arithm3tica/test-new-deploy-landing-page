@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "compile-css": "sass scss/main.scss css/main.css",
-    "watch": "sass --watch scss/main.scss:css/main.css",
-    "start": "php -S localhost:8888"
+    "build": "sass --update src/scss:dist/css && babel src/js -d dist/js",
+    "watch": "concurrently \"sass --watch src/scss:dist/css\" \"babel src/js -w -d dist/js\"",
   },
   "author": "Ryan Goree",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "concurrently": "^3.6.0",
     "node-sass": "^4.9.0"
   }
 }

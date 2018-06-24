@@ -1,0 +1,181 @@
+@import 'theme';
+
+%node {
+    width: 14px;
+    height: 14px;
+    background: $lightest-gray;
+    border: 3px solid $brand-yellow;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 1;
+    // box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+}
+
+#hero {
+    height: 500px;
+    min-height: 0;
+
+    .section-arrow-bottom * {
+        fill: $lightest-gray;
+    }
+}
+
+main {
+    background: $lightest-gray;
+    padding-top: 60px;
+    padding-bottom: 90px;
+}
+
+.timeline {
+    position: relative;
+    margin: 0 auto;
+
+    &:before {
+        @extend %node;
+        background: $dark-blue;
+        content: '';
+        top: -200px;
+        left: calc(50% - 10px);
+    }
+
+    &:after {
+        content: '';
+        width: 2px;
+        height: calc(100% + 190px);
+        background: $cool-gray-med-dark;
+        position: absolute;
+        top: -190px;
+        left: calc(50% - 1px);
+        opacity: .4;
+    }
+
+    .year-title {
+        text-align: center;
+        font-size: 20px;
+        background: $lightest-gray;
+        border: 3px solid $brand-yellow;
+        position: relative;
+        width: 80px;
+        height: 80px;
+        line-height: 74px;
+        z-index: 1;
+        margin: 0 auto;
+        border-radius: 80px;
+    }
+
+    .points {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        .point {
+            flex: 1 1 50%;
+            max-width: 50%;
+            position: relative;
+            z-index: 1;
+
+            @media screen and (max-width: $breakpoint-mobile-menu) {
+                max-width: 100%;
+                flex: 1 1 100%;
+                margin-top: 30px !important;
+            }
+
+            &:before {
+                @extend %node;
+                content: '';
+                position: absolute;
+                top: calc(50% - 10px);
+
+                @media screen and (max-width: $breakpoint-mobile-menu) {
+                    content: none;
+                }
+            }
+
+            .content {
+                background: #fff;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+                position: relative;
+
+                &:before {
+                    content: '';
+                    background: $brand-yellow;
+                    width: 50px;
+                    height: 2px;
+                    position: absolute;
+                    top: calc(50% - 1px);
+                    z-index: 1;
+
+                    @media screen and (max-width: $breakpoint-mobile-menu) {
+                        content: none;
+                    }
+                }
+
+                .time {
+                    @media screen and (max-width: $breakpoint-mobile-menu) {
+                        margin: -30px -30px 25px !important;
+                        height: 44px;
+                        line-height: 44px;
+                        background: $lightest-gray;
+                        border-radius: 10px 10px 0 0;
+                        color: $cool-gray-dark;
+                    }
+                }
+
+                :first-child {
+                    margin-top: 0;
+                }
+
+                :last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &.content-left {
+                margin-right: auto;
+
+                &:before {
+                    right: -10px;
+                }
+
+                .content {
+                    margin-right: 60px;
+
+                    @media screen and (max-width: $breakpoint-mobile-menu) {
+                        margin-right: 0;
+                    }
+
+                    &:before {
+                        left: 100%;
+                    }
+                }
+            }
+
+            &.content-right {
+                margin-left: auto;
+
+                &:before {
+                    left: -10px;
+                }
+
+                .content {
+                    margin-left: 60px;
+
+                    @media screen and (max-width: $breakpoint-mobile-menu) {
+                        margin-left: 0;
+                    }
+
+                    &:before {
+                        right: 100%;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+.final-cta .section-arrow-top * {
+    fill: $lightest-gray;
+}

@@ -2,20 +2,27 @@
 
 A landing page and timeline developed to socialize the [Arithmetica](http://arithmetica.network) platform.
 
-#### To run:
+#### To build:
 
 ```
 npm install
-npm run compile-css
-npm start
+npm run build
 ```
 
-If you want to make changes to the CSS and don't want to run the compile script each time, use:
+Then open `dist/index.html`.
+
+### If you want to make changes to the CSS and JS
+
+First do:
 
 ```
 npm run watch
 ```
 
-This will automatically compile the scss when you make changes.
+Then make your changes in the `src` directory. This will ensure everything is automatically compiled as you save your changes.
 
-Then, open http://localhost:8888 in your browser.
+Alternatively, you could make your changes first, then do:
+
+```
+npm run build
+```
