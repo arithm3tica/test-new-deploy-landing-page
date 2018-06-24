@@ -39,7 +39,7 @@ Thumbs.db
 # Other
 ######################
 node_modules
-dist/css
-dist/js
+# dist/css
+# dist/js
 .sass-cache
 
