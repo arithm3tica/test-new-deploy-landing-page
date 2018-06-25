@@ -5,7 +5,7 @@
   "main": "dist/index.html",
   "repository": "https://github.com/arithm3tica/landing-page.git",
   "scripts": {
-    "build": "sass --update src/scss:dist/css && babel src/js -d dist/js",
+    "build": "node-sass --output-style compressed -o dist/css src/scss && babel src/js -d dist/js",
     "watch": "concurrently \"sass --watch src/scss:dist/css\" \"babel src/js -w -d dist/js\"",
     "deploy": "source scripts/deploy"
   },
