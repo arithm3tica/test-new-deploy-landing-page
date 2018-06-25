@@ -42,6 +42,10 @@ h2 {
     font-size: 29px;
 }
 
+h3 {
+    font-size: 22px;
+}
+
 h1, h2, h3, h4, h5, h6, p {
     margin: 12px 0;
 }
@@ -364,16 +368,8 @@ input:not([type=submit]):not([type=file]) {
         border: 1px solid $cool-gray-dark;
 
         @media screen and (max-width: $breakpoint-mobile-menu) {
-            color: #fff;
-            height: 44px;
-            line-height: 42px;
-            font-size: 18px;
-            background: $brand-yellow;
-            text-shadow: 0 0 5px rgba(0, 0, 0, .25);
-            box-shadow: 1px 2px 5px rgba(0, 0, 0, .2);
+            @include button-cta();
             width: calc(100% - 40px);
-            margin: 20px 20px 0;
-            border: none;
         }
     }
 
@@ -390,15 +386,18 @@ input:not([type=submit]):not([type=file]) {
             height: 32px;
         }
 
-        #menu-container .active a:after {
-            bottom: -15px;
-        }
+        @media screen and (min-width: $breakpoint-mobile-menu + 1) {
 
-        .button {
-            @extend .button-cta;
-            font-size: 16px;
-            height: 36px;
-            line-height: 36px;
+            #menu-container .active a:after {
+                bottom: -15px;
+            }
+
+            .button {
+                @include button-cta();
+                font-size: 16px;
+                height: 36px;
+                line-height: 36px;
+            }
         }
     }
 }
@@ -485,17 +484,64 @@ main {
 }
 
 .use-cases {
-    padding: 180px 0 120px;
+    padding-top: 210px;
+    padding-bottom: 240px;
 
     .content-block {
         text-align: center;
         margin: 0 auto;
     }
+
+    .use-cases-heading {
+        margin: 60px 0 0;
+        text-align: center;
+    }
+}
+
+.icon-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .item {
+        flex: 1 1 610px;
+        display: flex;
+        align-items: flex-start;
+        max-width: 610px;
+        margin-top: 60px;
+
+        @media screen and (max-width: $breakpoint-laptop) {
+            flex-basis: 430px;
+        }
+
+        @media screen and (max-width: $breakpoint-small-monitor) {
+            flex-basis: 100%;
+        }
+
+        &:nth-child(2n) {
+            margin-left: 80px;
+
+            @media screen and (max-width: $breakpoint-small-monitor) {
+                margin-left: 0;
+            }
+        }
+
+        .icon {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+
+        .content {
+            max-width: 500px;
+            font-size: 18px;
+        }
+    }
 }
 
 .team {
-    padding-top: 90px;
-    padding-bottom: 120px;
+    padding-top: 110px;
+    padding-bottom: 180px;
 
     h2 {
         margin: 0 0 50px;
