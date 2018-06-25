@@ -6,5 +6,5 @@ git checkout gh-pages
 git submodule add -b gh-pages https://github.com/arithm3tica/arithmetica.git contribute
 echo arithmetica.network > CNAME
 git add CNAME
-git commit -a -m “updating changes from master”
+git commit -a -m "updating changes from master"
 git push origin head
