@@ -1,0 +1,9 @@
+git push origin --delete gh-pages
+git branch -D gh-pages
+git subtree push --prefix dist origin gh-pages
+git fetch
+git checkout gh-pages
+git submodule add -b gh-pages https://github.com/arithm3tica/arithmetica.git contribute
+echo arithmetica.network > CNAME
+git commit -a -m “updating changes from master”
+git push origin head

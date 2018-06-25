@@ -6,7 +6,8 @@
   "repository": "https://github.com/arithm3tica/landing-page.git",
   "scripts": {
     "build": "sass --update src/scss:dist/css && babel src/js -d dist/js",
-    "watch": "concurrently \"sass --watch src/scss:dist/css\" \"babel src/js -w -d dist/js\""
+    "watch": "concurrently \"sass --watch src/scss:dist/css\" \"babel src/js -w -d dist/js\"",
+    "deploy": "source srcipts/deploy"
   },
   "author": "Ryan Goree",
   "license": "MIT",
