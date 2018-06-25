@@ -26,3 +26,9 @@ Alternatively, you could make your changes first, then do:
 ```
 npm run build
 ```
+
+#### To deploy:
+
+```
+ npm run deploy
+```
